@@ -28,9 +28,11 @@ def before_feature(context, feature):
 
 
 def before_scenario(context, scenario):
-    command_executor = context.userdata.get('command_executor', 'localhost:4444/wd/hub')
     browser_name = context.userdata.get('browser', 'firefox')
-    context.options = {"addr": "192.168.15.19"}
+    local_machine_ip = context.userdata.get('local_machine_ip', '192.168.15.19')
+    selenium_port =  context.userdata.get('selenium_hub_port', '4444')
+    command_executor = f"{local_machine_ip}:{selenium_port}/wd/hub"
+    context.options = {"addr": local_machine_ip}
     context.desired_capabilities = {"browserName": browser_name}
     context.driver = webdriver.Remote(
         command_executor=command_executor,
