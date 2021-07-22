@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "bdd"
+version = "0.1.0"
+description = ""
+authors = ["Renan Moura <rvmoura.96@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+cookiecutter = "^1.7.3"
+behave = "^1.2.6"
+selenium = "^3.141.0"
+pydantic = "^1.8.2"
+ipdb = "^0.13.9"
+selenium-wire = "^4.3.3"
+Faker = "^8.10.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
