@@ -8,13 +8,11 @@ from bdd.modules.auxiliar import cast_table_to_dict
 @given(u'que acesse a home')
 def access_index_given(context):
     context.driver.get(context.url)
-    sleep(3)
 
 
 @when(u'acesso a home')
 def access_index(context):
     context.driver.get(context.url)
-    sleep(3)
 
 
 @when(u'clico no botão de "{button_name}"')
