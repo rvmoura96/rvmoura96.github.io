@@ -29,7 +29,7 @@ Para a execução do container do selenium baixado no passo anterior, use o coma
 docker run -p 4444:4444 -p 5900:5900 -v /dev/shm:/dev/shm selenium/standalone-firefox
 ```
 
-Com o container inicializado, edite a chave **local_machine_ip** do arquivo **behave.ini**, seu endereço de rede local(deverá ser algo  como 192.168.X.X).
+Com o container inicializado, edite a chave **local_machine_ip** do arquivo **behave.ini** com seu endereço de rede local (deverá ser algo  como 192.168.X.X).
 
 No diretório integration-tests, execute o comando seguinte comando para instalar as
 depêndencias do projeto:
