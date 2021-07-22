@@ -5,13 +5,12 @@ Os testes de integração da solução foram desenvolvidos utilizando Python.
 O framework utilizado foi o Behave um framework BDD foi escolhido tal
 ferramenta para os testes, pois é uma ótima ferramenta para validar o comportamento
 de aplicações. Também foram usadas algumas ferramentas de apoio ao Behave como
-Selenium, Seleniumwire, Selenium standalone e Faker. Os testes foram realizados
+Selenium, Selenium-wire, Selenium standalone (Imagem docker) e Faker. Os testes foram realizados
 para garantir que o comportamento solicitado no desafio está cumprindo seus
 requisitos.
 
-Todos os testes criados podem ser encontrados no diretório **bdd/features**, estão
-contemplados nos arquivos **.feature**. Qualquer pessoa pode fazer a leitura
-dos testes, pois foram escritos em uma linguagem natural onde não é esperado
+Todos os testes criados podem ser encontrados no diretório **bdd/features**.
+Qualquer pessoa pode fazer a leitura dos testes, pois foram escritos em uma linguagem natural onde não é esperado
 o conhecimento técnico para o entendimento dos cenários.
 
 Para o controle das dependências do projeto foi utilizado o Poetry, para detalhes de instalação [clique aqui](https://python-poetry.org/docs/#installation).
@@ -20,7 +19,7 @@ Para o controle das dependências do projeto foi utilizado o Poetry, para detalh
 
 Para as instruções de instalação do Docker [clique aqui](https://docs.docker.com/engine/install/)
 
-Para o download da imagem do docker do selenium-standalone-firefox use o comando no seu terminal:
+Para o download da imagem do docker do selenium-standalone-firefox use o seguinte comando no seu terminal:
 ```
 docker pull selenium/standalone-firefox
 ```
@@ -30,7 +29,7 @@ Para a execução do container do selenium baixado no passo anterior, use o coma
 docker run -p 4444:4444 -p 5900:5900 -v /dev/shm:/dev/shm selenium/standalone-firefox
 ```
 
-**Com o container preparado para receber os comandos enviados pelos testes, edite a chave local_machine_ip do arquivo behave.ini, para o ip local de sua máquina ou ip de onde está rodando o container.**
+Com o container inicializado, edite a chave **local_machine_ip** do arquivo **behave.ini**, seu endereço de rede local(deverá ser algo  como 192.168.X.X).
 
 No diretório integration-tests, execute o comando seguinte comando para instalar as
 depêndencias do projeto:
