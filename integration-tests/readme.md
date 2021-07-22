@@ -43,7 +43,7 @@ execute o seguinte comando:
 poetry shell
 ```
 
-Feito esses passos no diretório integration-tests, execute o comando:
+Feito esses passos no diretório integration-tests, execute o comando para a execução dos testes:
 ```
 behave bdd/features/
 ```
