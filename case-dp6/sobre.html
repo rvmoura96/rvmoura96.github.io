@@ -57,6 +57,24 @@ function sendPopupEvent(){
         eventLabel: 'enviado'
     });
 }
+
+function sendContactEvent(){
+    ga('send', {
+        hitType: 'event',
+        eventCategory: 'menu',
+        eventAction: 'entre_em_contato',
+        eventLabel: 'link_externo'
+    });
+}
+
+function sendDownloadEvent(){
+    ga('send', {
+        hitType: 'event',
+        eventCategory: 'menu',
+        eventAction: 'download_pdf',
+        eventLabel: 'download_pdf'
+    });
+}
 </script>
 
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
@@ -176,5 +194,15 @@ function sendPopupEvent(){
     var accept = document.getElementById('aceito').addEventListener('click', sendAcceptEvent, false);
 
     var modal_image = document.getElementsByClassName('lightbox-icon')[0].addEventListener('load', sendPopupEvent, false);
+    var download_array = document.getElementsByClassName('menu-lista-download');
+
+    for (var i = 0; i < download_array.length; i++) {
+        download_array[i].addEventListener('click', sendDownloadEvent, false);
+    }
+
+    var contact_array = document.getElementsByClassName('menu-lista-contato');
+    for (var i = 0; i < download_array.length; i++) {
+        contact_array[i].addEventListener('click', sendContactEvent, false);
+    }
 </script>
 </html>
