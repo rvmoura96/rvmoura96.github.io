@@ -194,10 +194,6 @@ function sendDownloadEvent(){
     var accept = document.getElementById('aceito').addEventListener('click', sendAcceptEvent, false);
 
     var modal_image = document.getElementsByClassName('lightbox-icon')[0].addEventListener('load', sendPopupEvent, false);
-    
-        for (var i = 0; i < download_array.length; i++) {
-        download_array[i].addEventListener('click', sendDownloadEvent, false);
-    }
 
     var download_array = document.getElementsByClassName('menu-lista-download');
     for (var i = 0; i < download_array.length; i++) {
