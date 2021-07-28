@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-12345-6', 'auto');
+
+sendPageViewEvent();
+
+function sendPageViewEvent(){
+    ga('send', 'pageview');
+}
+
+function sendContactEvent(){
+    ga('send', {
+        hitType: 'event',
+        eventCategory: 'menu',
+        eventAction: 'entre_em_contato',
+        eventLabel: 'link_externo'
+    });
+}
+
+function sendDownloadEvent(){
+    ga('send', {
+        hitType: 'event',
+        eventCategory: 'menu',
+        eventAction: 'download_pdf',
+        eventLabel: 'download_pdf'
+    });
+}
+</script>
+<!-- End Google Analytics -->
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+  <meta charset="UTF-8">
+  <title>Sample page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" >
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="index">
+  <link rel="stylesheet" href="css/lightbox.css">
+  <div class="lightbox-backdrop"></div>
+  <div class="lightbox">
+    <div class="lightbox-header">
+      <img src="img/montadoras/lorem.png" alt="Lorem" class="lightbox-icon">
+      <span class="lightbox-title">lorum</span>
+      <img class="lightbox-fechar" src="img/icon/x_cinza.png" alt="Fechar Lightbox">
+    </div>
+    <div class="lightbox-content"></div>
+  </div>
+  <link rel="stylesheet" href="css/menu.css">
+  <div class="menu-backdrop"></div>
+  <nav class="menu">
+    <img class="menu-fechar" src="img/icon/x_cinza.png" alt="Fechar Menu">
+    <div class="menu-header"><a href="/">Sample page<br><br></a></div>
+    <ul class="menu-lista">
+      <li class="menu-lista-item">
+        <a href="index.html" class="menu-lista-link menu-lista-index">Início</a>
+      </li>
+      <li class="menu-lista-item menu-lista-sublista fechado">
+        <a href="analise.html" class="menu-lista-link menu-lista-analise">Análise</a>
+        <ul class="menu-sublista">
+          <li class="menu-sublista-item">
+            <a href="analise.html#tristique" class="menu-sublista-link">Integer tristique</a>
+          </li>
+          <li class="menu-sublista-item">
+            <a href="analise.html#conclusoes" class="menu-sublista-link">Conclusões</a>
+          </li>
+        </ul>
+      </li>
+      <li class="menu-lista-item menu-lista-sublista fechado">
+        <a href="sobre.html" class="menu-lista-link menu-lista-sobre">Sobre</a>
+        <ul class="menu-sublista">
+          <li class="menu-sublista-item">
+            <a href="sobre.html#contato" class="menu-sublista-link">Contato</a>
+          </li>
+          <li class="menu-sublista-item">
+            <a href="sobre.html#historia" class="menu-sublista-link">História</a>
+          </li>
+          <li class="menu-sublista-item">
+            <a href="sobre.html#valores" class="menu-sublista-link">Valores</a>
+          </li>
+        </ul>
+      </li>
+      <li class="menu-lista-item">
+        <a href="https://www.google.com/" target="_blank" class="menu-lista-link menu-lista-contato">Entre em Contato</a>
+      </li>
+      <li class="menu-lista-item">
+        <a href="https://www.google.com/" class="menu-lista-link menu-lista-download" target="_pdf" onclick="downloadEvent();">Download PDF</a>
+      </li>
+    </ul>
+    <div class="menu-rodape">
+      <a href="https://www.google.com/" title="foo bar">
+        <img src="img/logo.png" alt="Foo Bar">
+      </a>
+    </div>
+  </nav>
+  <header class="cabecalho">
+    <h1>
+      <img src="img/icon/menu.png" alt="Menu" class="cabecalho-menu">
+      <a href="/"><img class="cabecalho-logo" src="img/logo.png" alt="foo logo" height="50px"></a>
+      <span></span>
+    </h1>
+  </header>
+  <main>
+    <section>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non ornare enim, a dictum elit. Aenean eleifend, nibh ac convallis consectetur, ligula nunc viverra ex, id vestibulum nisl ipsum sit amet nibh. Aenean tempus at nisl sed congue. Nulla aliquam dui et neque luctus, at efficitur lectus faucibus. Donec sed eros eget erat egestas euismod eget non orci. Sed feugiat ut purus eget pellentesque. Maecenas posuere mauris nunc, eu finibus mauris blandit sed. Ut lorem mauris, tempor at libero ut, ornare interdum ligula. Sed dapibus nulla sed lacus consectetur pellentesque. Vestibulum et risus nisi. Proin quis eros diam. Nunc at bibendum metus, a ultricies sapien. Phasellus vehicula, ex quis auctor elementum, eros libero accumsan risus, finibus efficitur ipsum ante non dolor. Donec sem orci, venenatis quis laoreet eget, porta at quam. Sed fermentum mi eu rutrum lacinia.
+
+        Mauris ac hendrerit elit. Vestibulum vestibulum dolor at neque finibus tincidunt. Fusce tincidunt placerat pharetra. Proin pretium vel ipsum sed ultrices. Vestibulum in urna sed odio posuere convallis. Maecenas rutrum eget nibh ut mollis. In hac habitasse platea dictumst. Sed viverra a lorem in vestibulum. Vivamus ut pharetra risus. Phasellus ultrices condimentum enim ac luctus.
+
+        Maecenas sollicitudin id enim vitae viverra. Donec aliquam auctor elit, et imperdiet turpis scelerisque ac. Morbi vestibulum turpis at odio bibendum congue. Sed nec lacus eleifend, pharetra mauris sit amet, varius ligula. Ut elementum elementum odio, sit amet auctor est maximus non. Etiam dictum erat at turpis aliquam pulvinar id quis nisl. Cras scelerisque, nisl ut fermentum scelerisque, lacus mi posuere tortor, at sodales erat dui id lectus. Phasellus congue odio eu sodales sagittis. Proin eu orci vitae felis rutrum feugiat. Phasellus ex dui, faucibus id volutpat quis, luctus non dui. Donec accumsan eros a elit sagittis, quis condimentum augue condimentum. Praesent ut sem augue. Aliquam vehicula tortor justo, vitae fringilla enim tincidunt eget. Donec elit sem, suscipit sed condimentum ut, vulputate non nunc.
+        <p class="secao-paragrafo">As instruções de como realizar a implementação está nas documentações apontadas, entretanto, caso possua qualquer dúvida, não hesite em entrar em contato conosco. Além disso, o PDF enviado em conjunto a este ambiente possui os eventos que deverão ser implementados.</p><a class="next-page" href="analise.html">Análise</a>
+    </section>
+  </main>
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/tagueamento.js"></script>
+  <script type="text/javascript">
+  var download_array = document.getElementsByClassName('menu-lista-download');
+  for (var i = 0; i < download_array.length; i++) {
+      download_array[i].addEventListener('click', sendDownloadEvent, false);
+  }
+  var contact_array = document.getElementsByClassName('menu-lista-contato');
+  for (var i = 0; i < download_array.length; i++) {
+      contact_array[i].addEventListener('click', sendContactEvent, false);
+  }
+  </script>
+</body>
+</html>
